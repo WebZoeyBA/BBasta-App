@@ -14,6 +14,7 @@ class CategoryGridItem extends StatelessWidget {
       onTap: selectCategory,
       child: Container(
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
           image: DecorationImage(
             image: category.image,
             fit: BoxFit.cover,
@@ -27,11 +28,6 @@ class CategoryGridItem extends StatelessWidget {
             children: [
               Text(
                 category.title,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
               ),
             ],
           ),

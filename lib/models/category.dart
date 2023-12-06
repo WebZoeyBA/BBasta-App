@@ -69,129 +69,164 @@ var dummyMeals = [
       description:
           "Ćevapi are minced meat sausages typically made from beef, lamb or a combination that are grilled and often served in bread with onions and ajvar spread.",
       title: 'Ćevapi',
-      price: 2),
+      price: 2,
+      image: AssetImage('images/cevapi.png')),
   const Meal(
-      id: 'm2',
-      categories: [
-        'c4',
-      ],
-      title: 'Grilled Ham',
-      description:
-          'Grilled ham consists of sliced ham that is cooked over an open fire or grill until heated through and lightly charred in places.',
-      price: 2),
+    id: 'm2',
+    categories: [
+      'c4',
+    ],
+    title: 'Grilled Ham',
+    description:
+        'Grilled ham consists of sliced ham that is cooked over an open fire or grill until heated through and lightly charred in places.',
+    price: 2,
+    image: AssetImage('images/pljeskavica.png'),
+  ),
   const Meal(
-      id: 'm3',
-      categories: ['c4'],
-      title: "Spicy Grilled Ham",
-      description:
-          'Spicy grilled ham consists of sliced ham seasoned with spices then cooked over an open flame until heated through and lightly charred, imparting bold flavor.',
-      price: 2),
+    id: 'm3',
+    categories: ['c4'],
+    title: "Spicy Grilled Ham",
+    description:
+        'Spicy grilled ham consists of sliced ham seasoned with spices then cooked over an open flame until heated through and lightly charred, imparting bold flavor.',
+    price: 2,
+    image: AssetImage('images/pljeskavica.png'),
+  ),
   const Meal(
-      id: "m4",
-      categories: ['c4'],
-      title: "Cheese filled grilled ham",
-      description:
-          'Cheese filled grilled ham consists of sliced ham with cheese inserted then cooked over an open flame, melting the cheese inside for enhanced flavor and texture.',
-      price: 2.2),
+    id: "m4",
+    categories: ['c4'],
+    title: "Cheese filled grilled ham",
+    description:
+        'Cheese filled grilled ham consists of sliced ham with cheese inserted then cooked over an open flame, melting the cheese inside for enhanced flavor and texture.',
+    price: 2.2,
+    image: AssetImage('images/pljeskavica.png'),
+  ),
   const Meal(
-      id: 'm5',
-      categories: ['c4'],
-      title: "Breaded Calf Brain",
-      description:
-          'Breaded calf brain consists of slices of calf brain coated in breadcrumbs then fried until golden brown, creating a crispy exterior around the delicate brain meat.',
-      price: 5),
+    id: 'm5',
+    categories: ['c4'],
+    title: "Breaded Calf Brain",
+    description:
+        'Breaded calf brain consists of slices of calf brain coated in breadcrumbs then fried until golden brown, creating a crispy exterior around the delicate brain meat.',
+    price: 5,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
-      id: 'm6',
-      categories: ['c4'],
-      title: "Wiener Schnitzel",
-      description:
-          'Wiener Schnitzel consists of a breaded veal cutlet that is deep fried until golden brown.',
-      price: 2),
+    id: 'm6',
+    categories: ['c4'],
+    title: "Wiener Schnitzel",
+    description:
+        'Wiener Schnitzel consists of a breaded veal cutlet that is deep fried until golden brown.',
+    price: 2,
+    image: AssetImage('images/snicla.png'),
+  ),
   const Meal(
-      id: "m7",
-      categories: ['c4'],
-      title: "Natur Schnitzel",
-      description:
-          'Natur schnitzel consists of an unpounded cutlet of meat that is pan fried until cooked through, retaining its thicker texture compared to breaded schnitzel.',
-      price: 2),
+    id: "m7",
+    categories: ['c4'],
+    title: "Natur Schnitzel",
+    description:
+        'Natur schnitzel consists of an unpounded cutlet of meat that is pan fried until cooked through, retaining its thicker texture compared to breaded schnitzel.',
+    price: 2,
+    image: AssetImage('images/snicla.png'),
+  ),
   const Meal(
-      id: 'm8',
-      categories: ['c4'],
-      title: 'Grilled Chicken Breast',
-      description:
-          'Grilled chicken breast consists of skinless chicken breast cooked over an open flame until no longer pink inside and marked with grill lines.',
-      price: 231),
+    id: 'm8',
+    categories: ['c4'],
+    title: 'Grilled Chicken Breast',
+    description:
+        'Grilled chicken breast consists of skinless chicken breast cooked over an open flame until no longer pink inside and marked with grill lines.',
+    price: 231,
+    image: AssetImage('images/filete.png'),
+  ),
   const Meal(
-      id: "m9",
-      categories: ['c4'],
-      title: "Breaded Chicken Breast",
-      description:
-          "Breaded chicken breast consists of chicken breast coated in breadcrumbs then pan fried until golden brown, creating a crispy exterior.",
-      price: 3),
+    id: "m9",
+    categories: ['c4'],
+    title: "Breaded Chicken Breast",
+    description:
+        "Breaded chicken breast consists of chicken breast coated in breadcrumbs then pan fried until golden brown, creating a crispy exterior.",
+    price: 3,
+    image: AssetImage('images/filete.png'),
+  ),
   const Meal(
-      id: 'm10',
-      categories: ['c4'],
-      title: "Cheese filled rolled chicken breast",
-      description:
-          'Breaded chicken breast consists of chicken breast coated in breadcrumbs then pan fried until golden brown, creating a crispy exterior.',
-      price: 3),
+    id: 'm10',
+    categories: ['c4'],
+    title: "Cheese filled rolled chicken breast",
+    description:
+        'Breaded chicken breast consists of chicken breast coated in breadcrumbs then pan fried until golden brown, creating a crispy exterior.',
+    price: 3,
+    image: AssetImage('images/rolovanap.png'),
+  ),
   const Meal(
-      id: 'm11',
-      categories: ['c4'],
-      title: "Chicken Skewers",
-      description:
-          'Chicken skewers consist of cubed chicken pieces threaded on sticks and cooked over high heat to char the outside while keeping the inside juicy.',
-      price: 3),
+    id: 'm11',
+    categories: ['c4'],
+    title: "Chicken Skewers",
+    description:
+        'Chicken skewers consist of cubed chicken pieces threaded on sticks and cooked over high heat to char the outside while keeping the inside juicy.',
+    price: 3,
+    image: AssetImage('images/raznjici.png'),
+  ),
   const Meal(
-      id: 'm12',
-      categories: ['c4'],
-      title: 'BBQ Mix 1',
-      description:
-          "A mixed meat platter consists of calf schnitzel, cotlet, chicken skewer, beef sausage, liver, a customer choice meat, and two pieces of flatbread.",
-      price: 3),
+    id: 'm12',
+    categories: ['c4'],
+    title: 'BBQ Mix 1',
+    description:
+        "A mixed meat platter consists of calf schnitzel, cotlet, chicken skewer, beef sausage, liver, a customer choice meat, and two pieces of flatbread.",
+    price: 3,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
-      id: 'm13',
-      categories: ['c4'],
-      title: "BBQ Mix 2",
-      description:
-          "A mixed meat platter consists of calf cotlet, chicken skewer, a large portion of grilled chicken breast, beef sausage, a customer choice meat, and two pieces of flatbread.",
-      price: 3),
+    id: 'm13',
+    categories: ['c4'],
+    title: "BBQ Mix 2",
+    description:
+        "A mixed meat platter consists of calf cotlet, chicken skewer, a large portion of grilled chicken breast, beef sausage, a customer choice meat, and two pieces of flatbread.",
+    price: 3,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
-      id: 'm14',
-      categories: ['c4'],
-      title: "BBQ Mix 3",
-      description:
-          "A substantial mixed meat platter includes 15 ćevapi sausages, chicken skewer, 3 beef sausages, 3 pork sausages, large grilled chicken breast, fries, and 4 pieces of flatbread.",
-      price: 3),
+    id: 'm14',
+    categories: ['c4'],
+    title: "BBQ Mix 3",
+    description:
+        "A substantial mixed meat platter includes 15 ćevapi sausages, chicken skewer, 3 beef sausages, 3 pork sausages, large grilled chicken breast, fries, and 4 pieces of flatbread.",
+    price: 3,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
-      id: 'm15',
-      categories: ['c4'],
-      title: "BBQ Mix 4",
-      description:
-          'A substantial mixed meat platter includes 10 ćevapi sausages, a large portion of grilled chicken breast, 3 chicken sausages, 3 beef sausages, fries, and 3 pieces of flatbread.',
-      price: 3),
+    id: 'm15',
+    categories: ['c4'],
+    title: "BBQ Mix 4",
+    description:
+        'A substantial mixed meat platter includes 10 ćevapi sausages, a large portion of grilled chicken breast, 3 chicken sausages, 3 beef sausages, fries, and 3 pieces of flatbread.',
+    price: 3,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
-      id: 'm16',
-      categories: ['c4'],
-      title: "BBQ Mix 5",
-      description:
-          'A mixed meat platter includes 10 ćevapi sausages, a small portion of grilled chicken breast, 2 chicken sausages, 1 beef sausage, fries, and 2 pieces of flatbread.',
-      price: 2),
+    id: 'm16',
+    categories: ['c4'],
+    title: "BBQ Mix 5",
+    description:
+        'A mixed meat platter includes 10 ćevapi sausages, a small portion of grilled chicken breast, 2 chicken sausages, 1 beef sausage, fries, and 2 pieces of flatbread.',
+    price: 2,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
-      id: 'm17',
-      categories: ['c5'],
-      title: "Begova čorba",
-      description:
-          "Begova corba is a hearty meat and vegetable soup that is popular in Bosnia and Herzegovina. It typically contains beef, carrots, potatoes and other seasonal vegetables in a savory broth.",
-      price: 3),
+    id: 'm17',
+    categories: ['c5'],
+    title: "Begova čorba",
+    description:
+        "Begova corba is a hearty meat and vegetable soup that is popular in Bosnia and Herzegovina. It typically contains beef, carrots, potatoes and other seasonal vegetables in a savory broth.",
+    price: 3,
+    image: AssetImage('images/corba.png'),
+  ),
   const Meal(
-      id: 'm18',
-      categories: ['c5'],
-      title: "Trahana",
-      description:
-          'Trahana is a traditional dish made from fermented grains such as wheat or bulgur that have been dried. It is commonly cooked into a soup or porridge by rehydrating the grains in broth until soft and creamy. Trahana soup is nourishing and comforting, containing trahana grains in a savory broth with vegetables and sometimes meat.',
-      price: 2),
-  const Meal(
+    id: 'm18',
+    categories: ['c5'],
+    title: "Trahana",
+    description:
+        'Trahana is a traditional dish made from fermented grains such as wheat or bulgur that have been dried. It is commonly cooked into a soup or porridge by rehydrating the grains in broth until soft and creamy. Trahana soup is nourishing and comforting, containing trahana grains in a savory broth with vegetables and sometimes meat.',
+    price: 2,
+    image: AssetImage('images/trahana.png'),
+  ),
+  /* const Meal(
       id: 'm19',
       categories: ['c4'],
       title: "Sitni Ćevap",
@@ -451,5 +486,5 @@ var dummyMeals = [
       title: "Preminger beer",
       description:
           "An Austrian-style lager brewed in Bosnia and Herzegovina, with a clean, refreshing taste.",
-      price: 2.5),
+      price: 2.5),*/
 ];
