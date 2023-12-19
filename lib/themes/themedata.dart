@@ -11,13 +11,14 @@ final ThemeData foodAppThemeData = ThemeData(
     background: Color(0xFFFFE8E1),
     error: Colors.red,
     onPrimary: Colors.white,
-    onSecondary: Colors.black,
+    onSecondary: Color.fromARGB(255, 32, 32, 32),
     onSurface: Colors.black,
     onBackground: Colors.black,
     onError: Colors.white,
     brightness: Brightness.light,
   ),
-  scaffoldBackgroundColor: Colors.black, // Light gray background
+  scaffoldBackgroundColor:
+      Color.fromARGB(255, 32, 32, 32), // Light gray background
   appBarTheme: const AppBarTheme(
     backgroundColor: Color(0xFF131A22),
     titleTextStyle: TextStyle(
@@ -29,7 +30,7 @@ final ThemeData foodAppThemeData = ThemeData(
       color: Colors.black,
     ),
     iconTheme: IconThemeData(
-      color: Colors.black,
+      color: Colors.white,
     ),
   ),
   buttonTheme: ButtonThemeData(
@@ -112,7 +113,6 @@ final ThemeData foodAppThemeData = ThemeData(
       shape: MaterialStateProperty.all<OutlinedBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
-          side: const BorderSide(color: const Color(0xFFFFECB3)),
         ),
       ),
       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
