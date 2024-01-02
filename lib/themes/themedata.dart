@@ -18,7 +18,7 @@ final ThemeData foodAppThemeData = ThemeData(
     brightness: Brightness.light,
   ),
   scaffoldBackgroundColor:
-      Color.fromARGB(255, 32, 32, 32), // Light gray background
+      const Color.fromARGB(255, 32, 32, 32), // Light gray background
   appBarTheme: const AppBarTheme(
     backgroundColor: Color(0xFF131A22),
     titleTextStyle: TextStyle(
@@ -110,6 +110,7 @@ final ThemeData foodAppThemeData = ThemeData(
   ),
   iconButtonTheme: IconButtonThemeData(
     style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
       shape: MaterialStateProperty.all<OutlinedBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),

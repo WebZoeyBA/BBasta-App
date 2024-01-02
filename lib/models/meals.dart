@@ -1,3 +1,4 @@
+import 'package:bbasta_app/models/category.dart';
 import 'package:flutter/material.dart';
 
 class Meal {
@@ -7,7 +8,8 @@ class Meal {
       required this.title,
       required this.description,
       required this.price,
-      required this.image});
+      required this.image,
+      this.portion});
 
   final String id;
   final List<String> categories;
@@ -15,4 +17,5 @@ class Meal {
   final String description;
   final double price;
   final AssetImage image;
+  final List<CevapPortion>? portion;
 }

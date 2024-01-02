@@ -5,7 +5,12 @@ class Category {
   String? id;
   String title;
   AssetImage image;
-  Category({this.id, required this.title, required this.image});
+
+  Category({
+    this.id,
+    required this.title,
+    required this.image,
+  });
 }
 
 final availableCategories = [
@@ -60,6 +65,7 @@ enum CevapPortion {
   small,
   medium,
   large,
+  extra,
 }
 
 var dummyMeals = [
@@ -70,7 +76,8 @@ var dummyMeals = [
           "Ćevapi are minced meat sausages typically made from beef, lamb or a combination that are grilled and often served in bread with onions and ajvar spread.",
       title: 'Ćevapi',
       price: 2,
-      image: AssetImage('images/cevapi.png')),
+      image: AssetImage('images/cevapi.png'),
+      portion: CevapPortion.values),
   const Meal(
     id: 'm2',
     categories: [

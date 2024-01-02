@@ -1,7 +1,7 @@
 import 'package:bbasta_app/models/meals.dart';
 import 'package:bbasta_app/themes/themedata.dart';
-import 'package:bbasta_app/widgets/meal_about.dart';
-
+import 'package:bbasta_app/widgets/about/meal_about.dart';
+import 'package:bbasta_app/widgets/meal_card.dart';
 import 'package:flutter/material.dart';
 
 class MealCard extends StatelessWidget {
