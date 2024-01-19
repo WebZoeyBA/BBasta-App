@@ -1,4 +1,5 @@
 import 'package:bbasta_app/models/meals.dart';
+import 'package:bbasta_app/providers/meal_about_provider.dart';
 import 'package:flutter/material.dart';
 
 class Category {
@@ -62,6 +63,7 @@ final availableCategories = [
 ];
 
 enum CevapPortion {
+  initial,
   small,
   medium,
   large,
@@ -70,14 +72,14 @@ enum CevapPortion {
 
 var dummyMeals = [
   const Meal(
-      id: 'm1',
-      categories: ['c4'],
-      description:
-          "Ćevapi are minced meat sausages typically made from beef, lamb or a combination that are grilled and often served in bread with onions and ajvar spread.",
-      title: 'Ćevapi',
-      price: 2,
-      image: AssetImage('images/cevapi.png'),
-      portion: CevapPortion.values),
+    id: 'm1',
+    categories: ['c4'],
+    description:
+        "Ćevapi are minced meat sausages typically made from beef, lamb or a combination that are grilled and often served in bread with onions and ajvar spread.",
+    title: 'Ćevapi',
+    price: 2,
+    image: AssetImage('images/cevapi.png'),
+  ),
   const Meal(
     id: 'm2',
     categories: [

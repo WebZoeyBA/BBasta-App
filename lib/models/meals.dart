@@ -9,7 +9,7 @@ class Meal {
       required this.description,
       required this.price,
       required this.image,
-      this.portion});
+      this.isFavorite = false});
 
   final String id;
   final List<String> categories;
@@ -17,5 +17,5 @@ class Meal {
   final String description;
   final double price;
   final AssetImage image;
-  final List<CevapPortion>? portion;
+  final bool isFavorite;
 }

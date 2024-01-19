@@ -110,7 +110,7 @@ final ThemeData foodAppThemeData = ThemeData(
   ),
   iconButtonTheme: IconButtonThemeData(
     style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(Colors.grey),
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
       shape: MaterialStateProperty.all<OutlinedBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),

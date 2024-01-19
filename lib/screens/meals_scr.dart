@@ -1,4 +1,6 @@
+import 'package:bbasta_app/data/selectedMeals.dart';
 import 'package:bbasta_app/models/meals.dart';
+import 'package:bbasta_app/screens/favorites_scr.dart';
 import 'package:bbasta_app/themes/themedata.dart';
 
 import 'package:bbasta_app/widgets/meal_card.dart';
@@ -26,7 +28,6 @@ class MealsScreen extends StatelessWidget {
       );
     }
     return Scaffold(
-      extendBodyBehindAppBar: true,
       backgroundColor: foodAppThemeData.colorScheme.onSecondary,
       body: NestedScrollView(
         headerSliverBuilder: (context, innerBoxIsScrolled) {
@@ -46,7 +47,20 @@ class MealsScreen extends StatelessWidget {
                 ),
               ),
               backgroundColor: Colors.transparent,
-              actions: [Icon(Icons.shopping_cart_checkout)],
+              actions: [
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.shopping_cart_checkout)),
+                IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const FavouriteMealsScreen()));
+                    },
+                    icon: Icon(
+                      Icons.favorite,
+                      color: Colors.white,
+                    ))
+              ],
             )
           ];
         },
