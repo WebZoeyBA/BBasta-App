@@ -12,7 +12,8 @@ class AboutMeal extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final favouriteMealsNotifier = ref.watch(mealsListNotifier.notifier);
+    final favoriteMeals = ref.watch(mealsListNotifier);
+    final isFavorite = favoriteMeals.contains(meal);
 
     AppBar customAppBar() {
       return AppBar(
@@ -55,8 +56,18 @@ class AboutMeal extends ConsumerWidget {
               ),
             ),
             PortionFeatures(
-                favoriteFunction: () =>
-                    favouriteMealsNotifier.toggleMealFavoriteStatus(meal)),
+                meal: meal,
+                iconColor: isFavorite ? Colors.red : Colors.grey,
+                favoriteFunction: () {
+                  final wasAdded = ref
+                      .read(mealsListNotifier.notifier)
+                      .toggleMealFavoriteStatus(meal);
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(wasAdded
+                          ? "Meal succesfully added to favorites"
+                          : "Meal succesfully removed from favorites.")));
+                }),
+            meal.hasPortionSize == true ? PortionSize() : const SizedBox(),
             Center(child: Text(meal.description))
           ],
         ));

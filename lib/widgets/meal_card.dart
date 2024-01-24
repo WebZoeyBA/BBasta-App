@@ -1,10 +1,11 @@
 import 'package:bbasta_app/models/meals.dart';
+import 'package:bbasta_app/providers/favorite_meal_provider.dart';
 import 'package:bbasta_app/themes/themedata.dart';
 import 'package:bbasta_app/widgets/about/meal_about.dart';
-import 'package:bbasta_app/widgets/meal_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MealCard extends StatelessWidget {
+class MealCard extends ConsumerWidget {
   const MealCard({
     super.key,
     required this.image,
@@ -19,7 +20,8 @@ class MealCard extends StatelessWidget {
   final Meal meal;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final cartMeals = ref.watch(cartListNotifier);
     return Stack(
       alignment: Alignment.center,
       clipBehavior: Clip.none,
@@ -60,7 +62,11 @@ class MealCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      final addedToCart = ref
+                          .read(cartListNotifier.notifier)
+                          .toggleCartStatus(meal);
+                    },
                     child: const Text(
                       "Add to cart",
                     ),

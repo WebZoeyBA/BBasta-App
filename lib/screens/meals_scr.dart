@@ -1,5 +1,5 @@
-import 'package:bbasta_app/data/selectedMeals.dart';
 import 'package:bbasta_app/models/meals.dart';
+import 'package:bbasta_app/screens/cart_screen.dart';
 import 'package:bbasta_app/screens/favorites_scr.dart';
 import 'package:bbasta_app/themes/themedata.dart';
 
@@ -49,7 +49,10 @@ class MealsScreen extends StatelessWidget {
               backgroundColor: Colors.transparent,
               actions: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const CartScreen()));
+                    },
                     icon: const Icon(Icons.shopping_cart_checkout)),
                 IconButton(
                     onPressed: () {

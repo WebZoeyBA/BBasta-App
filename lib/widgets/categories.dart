@@ -1,4 +1,3 @@
-import 'package:bbasta_app/data/selectedMeals.dart';
 import 'package:bbasta_app/models/category.dart';
 import 'package:bbasta_app/screens/meals_scr.dart';
 import 'package:bbasta_app/widgets/category_grid_item.dart';
@@ -43,15 +42,10 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                   selectCategory: () {
                     _selectCategory(context, category);
                   }),
-            FloatingActionButton(
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => FavoriteMeals(isFavorite: true)));
-                },
-                child: Icon(
-                  Icons.favorite,
-                  color: Colors.white,
-                ))
+            const Icon(
+              Icons.favorite,
+              color: Colors.white,
+            )
           ],
         ));
   }

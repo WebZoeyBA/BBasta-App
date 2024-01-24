@@ -1,4 +1,3 @@
-import 'package:bbasta_app/data/selectedMeals.dart';
 import 'package:bbasta_app/providers/favorite_meal_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

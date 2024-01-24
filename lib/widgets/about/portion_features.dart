@@ -1,17 +1,25 @@
+import 'package:bbasta_app/models/meals.dart';
 import 'package:bbasta_app/providers/favorite_meal_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PortionFeatures extends ConsumerWidget {
   Function favoriteFunction;
-  PortionFeatures({super.key, required this.favoriteFunction});
+  Meal meal;
+  PortionFeatures(
+      {super.key,
+      required this.favoriteFunction,
+      required this.meal,
+      required this.iconColor});
 
   bool isBottomSelected = false;
   Color colorBottom = Colors.grey;
+  Color iconColor = Colors.grey;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currentState = ref.watch(mealsListNotifier);
+    final isRed = ref.watch(mealsListNotifier.notifier).state.contains(meal);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -27,10 +35,13 @@ class PortionFeatures extends ConsumerWidget {
         IconButton(
             color: colorBottom,
             isSelected: isBottomSelected,
-            onPressed: () => favoriteFunction(),
-            icon: const Icon(
+            onPressed: () {
+              favoriteFunction();
+            },
+            icon: Icon(
               Icons.favorite,
               size: 35,
+              color: isRed ? Colors.red : Colors.grey,
             ))
       ],
     );

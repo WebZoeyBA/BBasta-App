@@ -1,5 +1,6 @@
 import 'package:bbasta_app/models/meals.dart';
 import 'package:bbasta_app/providers/meal_about_provider.dart';
+import 'package:bbasta_app/widgets/about/portion_size.dart';
 import 'package:flutter/material.dart';
 
 class Category {
@@ -79,6 +80,7 @@ var dummyMeals = [
     title: 'Ćevapi',
     price: 2,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: true,
   ),
   const Meal(
     id: 'm2',
@@ -90,6 +92,8 @@ var dummyMeals = [
         'Grilled ham consists of sliced ham that is cooked over an open fire or grill until heated through and lightly charred in places.',
     price: 2,
     image: AssetImage('images/pljeskavica.png'),
+    hasPortionSize: true,
+    portionSize: CevapPortion.initial,
   ),
   const Meal(
     id: 'm3',
@@ -99,6 +103,7 @@ var dummyMeals = [
         'Spicy grilled ham consists of sliced ham seasoned with spices then cooked over an open flame until heated through and lightly charred, imparting bold flavor.',
     price: 2,
     image: AssetImage('images/pljeskavica.png'),
+    hasPortionSize: true,
   ),
   const Meal(
     id: "m4",
@@ -108,6 +113,7 @@ var dummyMeals = [
         'Cheese filled grilled ham consists of sliced ham with cheese inserted then cooked over an open flame, melting the cheese inside for enhanced flavor and texture.',
     price: 2.2,
     image: AssetImage('images/pljeskavica.png'),
+    hasPortionSize: true,
   ),
   const Meal(
     id: 'm5',
@@ -117,6 +123,7 @@ var dummyMeals = [
         'Breaded calf brain consists of slices of calf brain coated in breadcrumbs then fried until golden brown, creating a crispy exterior around the delicate brain meat.',
     price: 5,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm6',
@@ -126,6 +133,7 @@ var dummyMeals = [
         'Wiener Schnitzel consists of a breaded veal cutlet that is deep fried until golden brown.',
     price: 2,
     image: AssetImage('images/snicla.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: "m7",
@@ -135,6 +143,7 @@ var dummyMeals = [
         'Natur schnitzel consists of an unpounded cutlet of meat that is pan fried until cooked through, retaining its thicker texture compared to breaded schnitzel.',
     price: 2,
     image: AssetImage('images/snicla.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm8',
@@ -144,6 +153,7 @@ var dummyMeals = [
         'Grilled chicken breast consists of skinless chicken breast cooked over an open flame until no longer pink inside and marked with grill lines.',
     price: 231,
     image: AssetImage('images/filete.png'),
+    hasPortionSize: true,
   ),
   const Meal(
     id: "m9",
@@ -153,6 +163,7 @@ var dummyMeals = [
         "Breaded chicken breast consists of chicken breast coated in breadcrumbs then pan fried until golden brown, creating a crispy exterior.",
     price: 3,
     image: AssetImage('images/filete.png'),
+    hasPortionSize: true,
   ),
   const Meal(
     id: 'm10',
@@ -162,6 +173,7 @@ var dummyMeals = [
         'Breaded chicken breast consists of chicken breast coated in breadcrumbs then pan fried until golden brown, creating a crispy exterior.',
     price: 3,
     image: AssetImage('images/rolovanap.png'),
+    hasPortionSize: true,
   ),
   const Meal(
     id: 'm11',
@@ -171,6 +183,7 @@ var dummyMeals = [
         'Chicken skewers consist of cubed chicken pieces threaded on sticks and cooked over high heat to char the outside while keeping the inside juicy.',
     price: 3,
     image: AssetImage('images/raznjici.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm12',
@@ -180,6 +193,7 @@ var dummyMeals = [
         "A mixed meat platter consists of calf schnitzel, cotlet, chicken skewer, beef sausage, liver, a customer choice meat, and two pieces of flatbread.",
     price: 3,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm13',
@@ -189,6 +203,7 @@ var dummyMeals = [
         "A mixed meat platter consists of calf cotlet, chicken skewer, a large portion of grilled chicken breast, beef sausage, a customer choice meat, and two pieces of flatbread.",
     price: 3,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm14',
@@ -198,6 +213,7 @@ var dummyMeals = [
         "A substantial mixed meat platter includes 15 ćevapi sausages, chicken skewer, 3 beef sausages, 3 pork sausages, large grilled chicken breast, fries, and 4 pieces of flatbread.",
     price: 3,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm15',
@@ -207,6 +223,7 @@ var dummyMeals = [
         'A substantial mixed meat platter includes 10 ćevapi sausages, a large portion of grilled chicken breast, 3 chicken sausages, 3 beef sausages, fries, and 3 pieces of flatbread.',
     price: 3,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm16',
@@ -216,6 +233,7 @@ var dummyMeals = [
         'A mixed meat platter includes 10 ćevapi sausages, a small portion of grilled chicken breast, 2 chicken sausages, 1 beef sausage, fries, and 2 pieces of flatbread.',
     price: 2,
     image: AssetImage('images/cevapi.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm17',
@@ -225,6 +243,7 @@ var dummyMeals = [
         "Begova corba is a hearty meat and vegetable soup that is popular in Bosnia and Herzegovina. It typically contains beef, carrots, potatoes and other seasonal vegetables in a savory broth.",
     price: 3,
     image: AssetImage('images/corba.png'),
+    hasPortionSize: false,
   ),
   const Meal(
     id: 'm18',
@@ -234,6 +253,7 @@ var dummyMeals = [
         'Trahana is a traditional dish made from fermented grains such as wheat or bulgur that have been dried. It is commonly cooked into a soup or porridge by rehydrating the grains in broth until soft and creamy. Trahana soup is nourishing and comforting, containing trahana grains in a savory broth with vegetables and sometimes meat.',
     price: 2,
     image: AssetImage('images/trahana.png'),
+    hasPortionSize: false,
   ),
   /* const Meal(
       id: 'm19',
